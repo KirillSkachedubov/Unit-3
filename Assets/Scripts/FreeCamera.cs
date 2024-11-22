@@ -53,11 +53,11 @@ public class FreeCamera : MonoBehaviour
 
 	void Move()
 	{
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
+		float h = Input.GetAxisRaw("Horizontal");
+		float v = Input.GetAxisRaw("Vertical");
 
-		float rotX = mainCamera.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
-		rotY += Input.GetAxis("Mouse Y") * sensitivity;
+		float rotX = mainCamera.transform.localEulerAngles.y + Input.GetAxisRaw("Mouse X") * sensitivity;
+		rotY += Input.GetAxisRaw("Mouse Y") * sensitivity;
 		rotY = Mathf.Clamp(rotY, -90, 90);
 
 		if (Input.GetKey(KeyCode.Mouse1))
