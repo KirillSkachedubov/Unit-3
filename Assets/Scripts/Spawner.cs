@@ -7,7 +7,7 @@ namespace TZ
     {
         public GameObject prefab;
 
-        public void Spawmn()
+        public void Spawn()
         {
             Debug.Log("Spawn");
 
