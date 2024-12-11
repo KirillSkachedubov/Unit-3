@@ -9,7 +9,7 @@ namespace TZ
         private int m_targetIndex = 0;
         private bool m_moved = false;
         public float moveSpeed = 10f;
-        public Transform cloud;
+        public Cloud cloud;
         public Transform[] targets;
         public void Action()
         {
@@ -20,6 +20,7 @@ namespace TZ
                 return;
             }
             m_moved = true;
+            cloud.StopFX();
             m_targetIndex++;
             if (m_targetIndex >= targets.Length) { m_targetIndex = 0; }
         }
@@ -30,16 +31,17 @@ namespace TZ
                 return;
             }
             Transform target = targets[m_targetIndex];
-            Vector3 targetPosition = new Vector3(target.position.x, cloud.position.y, target.position.z);
-            Vector3 offset = (targetPosition - cloud.position).normalized * Time.deltaTime * moveSpeed;
-            if(Vector3.Distance(cloud.position, targetPosition) < offset.magnitude)
+            Vector3 targetPosition = new Vector3(target.position.x, cloud.transform.position.y, target.position.z);
+            Vector3 offset = (targetPosition - cloud.transform.position).normalized * Time.deltaTime * moveSpeed;
+            if(Vector3.Distance(cloud.transform.position, targetPosition) < offset.magnitude)
             {
-                cloud.position = targetPosition;
+                cloud.transform.position = targetPosition;
                 m_moved = false;
+                cloud.PlayFX();
             }
             else
             {
-                cloud.Translate(offset);
+                cloud.transform.Translate(offset);
             }
         }
     }
