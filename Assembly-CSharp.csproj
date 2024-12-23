@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\Refresh.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\CloudController.cs" />
-    <Compile Include="Assets\Scripts\FreeCamera.cs" />
+    <Compile Include="Assets\Scripts\Golf\GameController.cs" />
+    <Compile Include="Assets\Scripts\Golf\LevelController.cs" />
+    <Compile Include="Assets\Scripts\Golf\SpawnerStone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AlignedGames\Polygonal Foliage Asset Package\Shaders\Cloud.shader" />
