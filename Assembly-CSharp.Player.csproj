@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cloud.cs" />
+    <Compile Include="Assets\Scripts\Golf\SpawnerStone.cs" />
     <Compile Include="Assets\AlignedGames\Polygonal Foliage Asset Package\Scripts\Utility\FlyCameraBehaviour.cs" />
     <Compile Include="Assets\Generic.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
@@ -67,7 +68,8 @@
     <Compile Include="Assets\Scripts\CloudController.cs" />
     <Compile Include="Assets\Scripts\Golf\GameController.cs" />
     <Compile Include="Assets\Scripts\Golf\LevelController.cs" />
-    <Compile Include="Assets\Scripts\Golf\SpawnerStone.cs" />
+    <Compile Include="Assets\Scripts\Golf\Stick.cs" />
+    <Compile Include="Assets\Scripts\Golf\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AlignedGames\Polygonal Foliage Asset Package\Shaders\Cloud.shader" />
