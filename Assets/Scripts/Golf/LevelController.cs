@@ -37,6 +37,7 @@ namespace Golf
         private void OnEnable()
         { 
             GameEvents.onStickHit += OnStickHit;
+            score = 0;
         }
 
         private void OnDisable()

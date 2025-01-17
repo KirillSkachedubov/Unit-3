@@ -12,6 +12,7 @@ namespace Golf
         private void OnCollisionEnter(Collision collision)
         {
             onCollision.Invoke(collision.collider);
+            GameEvents.CollisionStonesInvoke(collision);
         }
     }
 }

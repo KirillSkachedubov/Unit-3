@@ -3953,6 +3953,8 @@ MonoBehaviour:
   - {fileID: 132050184}
   - {fileID: 871980081}
   gamePlayState: {fileID: 1536210226}
+  levelController: {fileID: 1198833982}
+  scoreText: {fileID: 1645904953}
 --- !u!4 &470827304
 Transform:
   m_ObjectHideFlags: 0
@@ -13267,7 +13269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912925666}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c131c5ed13b38274780e69322c060007, type: 3}
   m_Name: 
@@ -15241,7 +15243,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198833981}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 201589c0f8fb3ff4e88efbc1c212e452, type: 3}
   m_Name: 
@@ -16068,8 +16070,8 @@ GameObject:
   - component: {fileID: 1258523271}
   - component: {fileID: 1258523274}
   - component: {fileID: 1258523273}
-  - component: {fileID: 1258523272}
   - component: {fileID: 1258523275}
+  - component: {fileID: 1258523276}
   m_Layer: 5
   m_Name: HitButton
   m_TagString: Untagged
@@ -16098,50 +16100,6 @@ RectTransform:
   m_AnchoredPosition: {x: -363, y: 288}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1258523272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258523270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0.9150943, g: 0.16834284, b: 0.16834284, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.7294118, g: 0.7294118, b: 0.7294118, a: 1}
-    m_SelectedColor: {r: 0.91372555, g: 0.16862746, b: 0.16862746, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1258523273}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1258523273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16201,6 +16159,51 @@ MonoBehaviour:
     width: 0
     height: 0
   m_margins: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1258523276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258523270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 912925667}
+          m_TargetAssemblyTypeName: Golf.PlayerController, Assembly-CSharp
+          m_MethodName: OnDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 912925667}
+          m_TargetAssemblyTypeName: Golf.PlayerController, Assembly-CSharp
+          m_MethodName: OnUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1262649895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18331,6 +18334,7 @@ MonoBehaviour:
   levelController: {fileID: 1198833982}
   playerController: {fileID: 912925667}
   gameOverState: {fileID: 1306223045}
+  scoreText: {fileID: 1645904953}
 --- !u!4 &1536210227
 Transform:
   m_ObjectHideFlags: 0
